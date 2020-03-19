@@ -63,7 +63,7 @@ def nearest_neighbor(y, x, r_h, r_w, ratio, img):
 		return img[ssy][ssx]
 
 if __name__ == '__main__':
-	img = cv2.imread('IU.png', 1)
+	img = cv2.imread('src/IU.png', 1)
 
 	height = np.shape(img)[0]
 	width = np.shape(img)[1]
@@ -82,7 +82,7 @@ if __name__ == '__main__':
 			# t_img[h][w] = img[hh][ww]
 			t_img[h][w] = nearest_neighbor(h, w, r_height, r_width, ratio, img)
 
-	cv2.imwrite("lab1_2.jpg", t_img)
+	cv2.imwrite("img/lab1_2.jpg", t_img)
 	cv2.imshow('My Image', t_img)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()

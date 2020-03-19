@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('kobe.jpg', 1)
+img = cv2.imread('src/kobe.jpg', 1)
 # print(np.shape(img))
 
 
@@ -17,7 +17,7 @@ for w in range(width):
 		gray /= 3.0
 		t_img[h][w][0] = gray		
 	
-cv2.imwrite("lab1_1.jpg", t_img)
+cv2.imwrite("img/lab1_1.jpg", t_img)
 
 cv2.imshow('My Image', t_img)
 cv2.waitKey(0)

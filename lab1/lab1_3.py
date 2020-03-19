@@ -65,7 +65,7 @@ def bilinear(y, x, ch, r_h, r_w, ratio, img):
 	return ss
 	
 if __name__ == '__main__':
-	img = cv2.imread('IU.png', 1)
+	img = cv2.imread('src/IU.png', 1)
 
 	height = np.shape(img)[0]
 	width = np.shape(img)[1]
@@ -80,7 +80,7 @@ if __name__ == '__main__':
 		for w in range(r_width):
 			for ch in range(3):
 				t_img[h][w][ch] = bilinear(h, w, ch, r_height, r_width, ratio, img)
-	cv2.imwrite("lab1_3.jpg", t_img)
+	cv2.imwrite("img/lab1_3.jpg", t_img)
 	cv2.imshow('MyImage', t_img)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
