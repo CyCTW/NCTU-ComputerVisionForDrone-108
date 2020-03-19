@@ -32,11 +32,12 @@ def bilinear(y, x, ch, r_h, r_w, ratio, img):
 	#                       #
 	# # # # # # # # # # # # #
 	
+	# x, y -> row and column index
+	# x + 0.5 => right shift to the correct position we defined
+	# * ratio => map coordinate from new image to origin image
+	# - 0.5 => left shift to fit coord between two integers (between two column(row) index)
+	 
 	fx = (float)( (x + 0.5) / ratio - 0.5)
-	# (x+0.5)*ratio => map from coordinate from new image to origin image
-	# -0.5 => left shift to fit coord between two integers 
-	# (for easily computed)
-	
 	sx = math.floor(fx)
 	fx -= sx
 
