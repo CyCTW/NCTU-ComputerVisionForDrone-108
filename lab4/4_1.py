@@ -31,7 +31,7 @@ while True :
 		
 		cv2.imshow('img', frame)
 
-		if cv2.waitKey(500) & 0xFF == ord('q'):
+		if cv2.waitKey(5000) & 0xFF == ord('q'):
 			break
 
 print("total images: {}".format( len(imgpoints)))
@@ -45,7 +45,7 @@ print()
 	
 
 
-f = cv2.FileStorage("test", cv2.FILE_STORAGE_WRITE)
+f = cv2.FileStorage("data.txt", cv2.FILE_STORAGE_WRITE)
 f.write("intrinsic", mtx)
 f.write("distortion", dist)
 f.release()

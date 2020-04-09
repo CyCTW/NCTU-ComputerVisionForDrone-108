@@ -52,5 +52,5 @@ while True :
 		cv2.imshow("test", dst)
 		
 		key = cv2.waitKey(30) & 0XFF
-		if key == ord('q'):
+		if key != 255:
 			break
