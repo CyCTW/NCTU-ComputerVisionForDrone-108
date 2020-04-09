@@ -6,7 +6,7 @@ import math
 warp_coord = np.empty([4, 2], dtype="float32")
 idx = 0
 # click four coordinate add picture
-str = ["Upper-left corner", "Lower-left corner", "Upper-right corner", "Upper-left corner"]
+str = ["Upper-left corner", "Lower-left corner", "Lower-right corner", "Upper-right corner"]
 def callback(event, x, y, flags, param):
 	global idx
 	if event == cv2.EVENT_LBUTTONDOWN:
@@ -18,7 +18,7 @@ def callback(event, x, y, flags, param):
 			print("Please Click " + str[idx])
 		else:
 			print("Press any key to continue")
-img = cv2.imread('src/warp.jpg', 1)q
+img = cv2.imread('src/warp.jpg', 1)
 cv2.namedWindow("ClickCoordinate")
 cv2.setMouseCallback("ClickCoordinate", callback)
 
