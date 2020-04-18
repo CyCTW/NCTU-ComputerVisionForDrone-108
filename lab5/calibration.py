@@ -11,7 +11,7 @@ imgpoints = []
 
 imgs = []
 for idx in range(11, 20):
-	file_name = 'pic/'+str(idx)+'.jpg'
+	file_name = 'src/'+str(idx)+'.jpg'
 	img = cv2.imread(file_name, 1)
 	imgs.append(img)
 

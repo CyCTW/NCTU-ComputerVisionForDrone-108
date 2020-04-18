@@ -42,7 +42,6 @@ while True :
 		origin_coord = np.array( [ [0., 0.], [0., h], [w, h], [w, 0.]], dtype="float32")
 
 		M = cv2.getPerspectiveTransform(origin_coord, warp_coord)
-
 		dst = cv2.warpPerspective(frame, M, (w, h), cv2.INTER_LINEAR)
 		w_coord = warp_coord.astype('int32')
 		
